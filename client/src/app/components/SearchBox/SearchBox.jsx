@@ -26,7 +26,6 @@ const SearchBox = ( { placeholderText, onSearchHandler, query}) => {
                 <Input 
                     className={Style.inputBox}
                     type="text"
-                    value={input}
                     placeholder={placeholderText}
                     onKeyPress={(event) => {onEnterPressHandler(event, onSearchHandler)} }
                     onChange={(event) => input = event.target.value} />

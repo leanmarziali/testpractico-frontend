@@ -63,7 +63,7 @@ const Product = ({ product, onProductHandler }) => (
         <Container 
             className={Style.productInfo}
         >
-            { productHeader(product.price, product.free_shipping, "Capital Federal") }
+            { productHeader(product.price, product.free_shipping, product.address) }
             { productBody(product.title) }
         </Container>
     </div>

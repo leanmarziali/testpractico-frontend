@@ -13,7 +13,7 @@ export default class ProductDetails extends Component {
     constructor () {
         super();
         this.state = {
-            detalis: null
+            details: null
         };
     }
 
@@ -99,22 +99,22 @@ export default class ProductDetails extends Component {
         </div>
     );
 
+    productDetails = () => (
+        <div className={Style.product}>
+            <div className="productDetails">
+                    <Row>
+                        { this.productDetailsImage(this.state.details.picture) }
+                        { this.productDetailsInfo(this.state.details) }  
+                    </Row>
+                { this.productDetailsDescription(this.state.details.description) }
+            </div>
+        </div>
+    )
+
     render() {
         return (
             <Container>
-                {
-                 this.state.details &&
-                <div className={Style.product}>
-                    <div className="productDetails">
-                         this.state.details &&
-                            <Row>
-                                { this.productDetailsImage(this.state.details.picture) }
-                                { this.productDetailsInfo(this.state.details) }  
-                            </Row>
-                        { this.productDetailsDescription(this.state.details.description) }
-                    </div>
-                </div>
-                }
+              { this.state.details && this.productDetails() }
             </Container>
         );
     }

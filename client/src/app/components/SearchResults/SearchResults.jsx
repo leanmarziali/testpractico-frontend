@@ -22,16 +22,26 @@ class SearchResults extends Component {
         }
     }
 
-    componentWillMount() {
-        if (this.props.query)
-            ProductsManager.getProducts(this.props.query)
-             .then( response => {
-                 if (response.categories && response.items)
+    getProductsData = (query) => {
+        if (query)
+            ProductsManager.getProducts(query)
+            .then( response => {
+                if (response.categories && response.items)
                     this.setState({
                         products: response
                     })
-             });
+            });
     }
+
+    componentWillMount() {
+       this.getProductsData(this.props.query);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        //UnSafe lifecycle method
+        this.getProductsData(nextProps.query);
+    }
+
 
     onProductHandler = (productId) => {
         if (productId) {

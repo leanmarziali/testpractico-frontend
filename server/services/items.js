@@ -28,10 +28,11 @@ var parseItems = function(data) {
             id: data.results[i].id,
             title: data.results[i].title,
             price: {
-            currency: '$', // default value
-            amount: data.results[i].price,
-            decimals: 2 // default value
+                currency: '$', // default value
+                amount: data.results[i].price,
+                decimals: 2 // default value
             },
+            address: data.results[i].address.state_name,
             picture: data.results[i].thumbnail,
             condition: data.results[i].condition,
             free_shipping: data.results[i].free_shipping
