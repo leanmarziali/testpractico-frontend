@@ -1,0 +1,52 @@
+@import '../../../assets/colors';
+
+:local(.product) {
+
+    background-color: $container-secondary;
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    
+    .productImg {
+        width: 180px;
+        height: 180px;
+        border-radius: 4px;
+        margin-right: 16px;
+    }
+}
+
+:local(.productInfo) {
+
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 16px;
+
+    .productHeader {
+        
+        display: flex;
+        align-items: flex-end;
+
+        .productPrice {
+        
+            font-size: 24px;
+        }
+
+        .shippingLogo {
+
+            margin-left: 5px;
+        }
+    
+        .productLocation {
+    
+            font-size: 12px;
+            color: $grey99;
+        }
+    }
+
+
+    .productTitle {
+
+        margin-top: 32px;
+        font-size: 18px;
+    }
+}

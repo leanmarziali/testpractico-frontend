@@ -1,0 +1,22 @@
+@import '../../assets/colors';
+
+:local(.imgSearch) {
+
+    background-color: $container-primary;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin: 10px;
+    }
+}
+
+:local(.inputBox) {
+
+    outline: none;
+    box-shadow:none !important;
+    border: none;
+    font-size: 18px;
+}
